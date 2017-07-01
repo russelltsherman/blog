@@ -1,0 +1,32 @@
+baseurl = "https://russelltsherman.github.io/"
+enablegitinfo = true
+languageCode = "en-us"
+paginate = 15
+pygmentsCodeFences = true
+# pygmentsUseClasses = true
+# pygmentsStyle = "solarized-dark"
+relativeURLs = true
+title = "Russell T Sherman"
+theme = "bootstrap4"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 100
+
+  [[menu.main]]
+    identifier = "tools"
+    name = "Tools"
+    url = "/tools/"
+    weight = 120
+
+[outputFormats.glossary]
+  baseName = "glossary"
+  isPlainText = true
+  mediaType = "application/json"
+  notAlternative = true
+
+[markup.goldmark.renderer]
+  unsafe= true

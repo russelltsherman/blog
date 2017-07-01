@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{ $pag := .Paginate (where .Site.Pages "Type" .Type) }}
+<div class="container">
+    <h1 class="text-center">
+        {{ .Type | humanize }}
+    </h1>
+
+    <div class="text-center">
+    {{ .Content }}
+    </div>
+
+    {{ range $pag.Pages }}
+    <div class="row mt-2">
+        <div class="d-none d-sm-block col-sm-2 mt-auto offset-sm-2 text-right">
+            <a class="text-body" href="{{ .Permalink | relURL }}">{{ if .Draft }}DRAFT:
+                {{end}}{{ .Title | markdownify }}</a>
+        </div>
+        <div class="col">
+            <a class="text-body" href="{{ .Permalink | relURL }}">{{ if .Draft }}DRAFT: {{end}}{{ .Description | markdownify }}</a>
+        </div>
+    </div>
+    {{ end }}
+</div>
+{{ partial "pagination.html" . }}
+{{ end }}

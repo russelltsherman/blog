@@ -1,0 +1,27 @@
+{{ if .Pages }}
+<div class="col-md-4 clearfix">
+
+    <div class="card text-white mb-3">
+        <div class="card-header">
+        <a href="{{ .RelPermalink }}" class="">
+            <i class="{{ .Params.icon | default "fas fa-bullhorn" }}" aria-hidden="true"></i>
+            {{ safeHTML .Params.Pre }}{{ .Title | markdownify }}{{ safeHTML .Params.Post }}
+        </a>
+
+        </div>
+        <div class="card-body">
+            <div class="scroll" style="overflow:auto; min-height: 100px;; max-height: 100px;">
+                <ul class="list-group">
+                    {{- range .Pages -}}
+                    {{ if .Title }}
+                    <li class="">
+                        <a href="{{ .Permalink }}">{{- .Title -}}</a>
+                    </li>
+                    {{- end -}}
+                    {{- end -}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}

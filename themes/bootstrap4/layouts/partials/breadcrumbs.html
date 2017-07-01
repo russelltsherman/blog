@@ -1,0 +1,7 @@
+{{if not .IsHome}}
+<nav aria-label="breadcrumb navbar-dark">
+    <ol class="breadcrumb">
+        {{ template "breadcrumb" dict "page" . "value" (printf "<li class='breadcrumb-item active' aria-current='page'>%s</li>" (.Title | markdownify)) }}
+    </ol>
+</nav>
+{{ end }}
