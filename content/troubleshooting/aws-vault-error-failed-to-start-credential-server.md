@@ -20,4 +20,3 @@ aws-vault: error: Failed to start credential server: listen tcp 127.0.0.1:9099: 
 ## Answer
 
 This is usually caused by another geodesic shell running. This happens because aws-vault server can only be run once. Try exiting your other geodesic shell.
-

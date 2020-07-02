@@ -20,6 +20,7 @@ Per the [documentation](https://github.com/segmentio/chamber/blob/master/README.
 You can follow the [AWS KMS documentation](http://docs.aws.amazon.com/kms/latest/developerguide/create-keys.html) to create your key, and follow this guide to [set up your alias](http://docs.aws.amazon.com/kms/latest/developerguide/programming-aliases.html).
 
 We recommend using Terraform:
+
 ```
 resource "aws_kms_key" "parameter_store" {
   description             = "Parameter store kms master key"
@@ -36,7 +37,6 @@ resource "aws_kms_alias" "parameter_store_alias" {
 {{% dialog type="info" icon="fa-info-circle" title="Note" %}}
 Define `CHAMBER_KMS_KEY_ALIAS` environment variable to override the default of `alias/parameter_store_key`
 {{% /dialog %}}
-
 
 Also, we now have a Terraform Module to manage KMS keys: <https://github.com/cloudposse/terraform-aws-kms-key>
 

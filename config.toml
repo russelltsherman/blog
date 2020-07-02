@@ -7,7 +7,22 @@ pygmentsCodeFences = true
 # pygmentsStyle = "solarized-dark"
 relativeURLs = true
 title = "Russell T Sherman"
-theme = "bootstrap4"
+theme = "gruvbox"
+
+
+[params]
+  author = { name = "Ben Brooks" }
+  description = "Software Engineer & Gopher"
+  keywords = ["software engineering", "golang", "gopher", "blog", "programmer", "bbrks"]
+  titlePrefix = ""
+  titleSuffix = " | bbrks.me"
+  dateFormat = "2006-01-02"
+  menuItemPrefix = "~/"
+  postTruncateLength = 250
+  hideGopher = false
+  disqusAutoLoad = false
+  disqusAutoLoadCount = false
+
 
 [menu]
   [[menu.main]]

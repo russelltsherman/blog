@@ -20,4 +20,3 @@ When calling `aws-vault exec` or using `assume-role` in `geodesic`, a single lin
 ## Answer
 
 This is usually because there's a `[default]` section in your `~/.aws/config`. Remove that and it should start to work.
-

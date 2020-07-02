@@ -33,4 +33,3 @@ The module had made a significant change which involved adding a `count` paramet
 ## Answer
 
 We've encountered this error as well, although it happens very seldom. Basically what happens is that terraform chokes because it is referencing some old `output` names from a previous generation. We don't know how to avoid it, but rerunning `terraform apply` tends to fix it. Please contact us by clicking the "Ask a Question" link, if this does not resolve your issues.
-

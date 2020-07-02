@@ -34,7 +34,6 @@ Please make sure you have the correct access rights
 and the repository exists.
 ```
 
-
 ## Answer
 
 This usually happens for one of two reasons:

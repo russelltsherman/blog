@@ -21,5 +21,3 @@ aws-vault: error: Failed to get credentials for peerstreet (source profile for c
 ## Answer
 
 This horribly cryptic error message is a cryptographers way of saying "wrong password". Just try running the command again, but this time enter the correct password. =)
-
-
